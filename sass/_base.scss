@@ -1,3 +1,44 @@
+//Colors
+$color-pink: hsl(322, 100%, 66%);
+$color-light-pink: hsl(321, 100%, 78%);
+$color-light-red: hsl(0, 100%, 63%);
+$color-cyan: hsl(192, 100%, 9%);
+$color-blue: hsl(207, 100%, 98%);
+
+//breaking points
+$bp-largest: 75em; //1200px/16px (1200px)
+$bp-large: 62.5em; //1000px/16px (1000px)
+$bp-medium: 50em; //800px/16px (800px)
+$bp-small: 37.5em; //600px/16px (600px)
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 8px/16px 1rem = 8px
+  }
+}
+
 body {
-  background-color: red;
+  line-height: 1.5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [full-start]8rem [center-start]repeat(10, [col-start] 1fr [col-end])
+    [center-end] 8rem[full-end];
+  grid-template-rows: min-content;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }

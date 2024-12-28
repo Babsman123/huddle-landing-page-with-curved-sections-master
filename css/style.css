@@ -1,2 +1,165 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
 body {
-  background-color: red; }
+  line-height: 1.5; }
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] 8rem [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 8rem [full-end];
+  grid-template-rows: min-content; }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      grid-template-columns: repeat(12, 1fr); } }
+
+.header--left img {
+  width: 15rem;
+  height: 100%; }
+
+.header--right__head {
+  border: 1px solid #ff8fd8;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  color: #ff8fd8; }
+
+.community__button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  width: 80%;
+  background-color: #ff52bf;
+  border: none;
+  color: #fff;
+  box-shadow: 0 0.2rem 1rem #00252e; }
+
+.header {
+  grid-column: center-start / center-end;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      grid-column: 1 / -1; } }
+
+.community {
+  grid-column: col-start 2 / col-end 9;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 5rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .community {
+      grid-column: 1 / -1; } }
+  .community h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem; }
+  .community__text {
+    grid-column: 2 / 6;
+    margin-bottom: 3rem; }
+  .community__button {
+    grid-column: 3 / 5;
+    margin-top: 2rem;
+    margin-bottom: 4rem; }
+  .community img {
+    grid-column: 2 / 6;
+    width: 100%; }
+  .community__data {
+    grid-column: 2 / 6;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-column-gap: 5rem; }
+    .community__data .data {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); }
+      .community__data .data__user {
+        font-size: 7rem;
+        font-weight: 900;
+        grid-column: 2 / 4; }
+      .community__data .data img {
+        width: 5rem;
+        grid-column: 2 / 4; }
+      .community__data .data__text {
+        grid-column: 2 / 4; }
+
+.grow {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  background-color: #f5faff; }
+  @media only screen and (max-width: 37.5em) {
+    .grow {
+      grid-column: 1 / -1; } }
+  .grow__details {
+    padding: 3rem 3rem;
+    grid-column: 2 / 8;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-column-gap: 10rem; }
+  .grow__content {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .grow__picture img {
+    width: 80%; }
+  .grow .grow-bg--1 {
+    grid-column: 1 / -1;
+    background-color: #fff; }
+    .grow .grow-bg--1 img {
+      margin-bottom: -1rem;
+      width: 100%; }
+  .grow .grow-bg--2 {
+    grid-column: 1 / -1;
+    background-color: #fff; }
+    .grow .grow-bg--2 img {
+      transform: scaleY(-1);
+      width: 100%;
+      margin-top: -1rem; }
+
+.community h3 {
+  font-size: 3.5rem;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .community h3 {
+      margin: 0 5rem; } }
+
+.community__text {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 13rem; }
+  @media only screen and (max-width: 37.5em) {
+    .community__text {
+      margin: 0 1rem; } }
+
+.community .data {
+  border: 1px solid green; }
+  .community .data__text {
+    font-size: 1.6rem;
+    border: 1px solid yellow; }
+    .community .data__text:last-child {
+      text-align: center; }
+
+.grow__content h3 {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 1rem; }
+
+.grow__content p {
+  font-size: 1.2rem;
+  margin-right: 2rem;
+  font-weight: 600;
+  color: #00252e; }

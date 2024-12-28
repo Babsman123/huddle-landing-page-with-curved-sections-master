@@ -1,0 +1,35 @@
+.header {
+  &--left {
+    img {
+      width: 15rem;
+      height: 100%;
+    }
+  }
+
+  &--right {
+    &__head {
+      border: 1px solid $color-light-pink;
+      padding: 0.5rem 2rem;
+      border-radius: 2rem;
+      text-align: center;
+      color: $color-light-pink;
+    }
+  }
+}
+
+.community {
+  &__button {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    width: 80%;
+    background-color: $color-pink;
+    border: none;
+    color: #fff;
+    box-shadow: 0 0.2rem 1rem $color-cyan;
+  }
+
+  &__data {
+  }
+}

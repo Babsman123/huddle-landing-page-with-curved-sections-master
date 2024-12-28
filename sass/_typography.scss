@@ -1,0 +1,47 @@
+.community {
+  h3 {
+    font-size: 3.5rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 0 5rem;
+    }
+  }
+  &__text {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0 13rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 0 1rem;
+    }
+  }
+
+  .data {
+    border: 1px solid green;
+
+    &__text {
+      font-size: 1.6rem;
+      border: 1px solid yellow;
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.grow {
+  &__content {
+    h3 {
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-right: 2rem;
+      font-weight: 600;
+      color: $color-cyan;
+    }
+  }
+}
