@@ -74,20 +74,20 @@
   }
 }
 
-.grow {
+.section-layout {
   grid-column: full-start / full-end;
 
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  background-color: $color-blue;
 
   @media only screen and (max-width: $bp-small) {
     grid-column: 1 / -1;
   }
 
   &__details {
-    padding: 3rem 3rem;
+    padding: 1rem 3rem;
     grid-column: 2 / 8;
+    border: 1px solid red;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -106,23 +106,57 @@
       width: 80%;
     }
   }
-  .grow-bg--1 {
+  .section-bg--1 {
     grid-column: 1 / -1;
     background-color: #fff;
 
     img {
+      width: 100%;
       margin-bottom: -1rem;
+    }
+  }
+
+  .section-bg--2 {
+    grid-column: 1 / -1;
+    background-color: #fff;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.build {
+  grid-column: col-start 2 / col-end 9;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+  }
+
+  &__button {
+    grid-column: 3 / 5;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.footer {
+  grid-column: full-start / full-end;
+  background-color: $color-cyan;
+
+  &__bg {
+    background-color: #fff;
+    img {
       width: 100%;
     }
   }
 
-  .grow-bg--2 {
-    grid-column: 1 / -1;
-    background-color: #fff;
-    img {
-      transform: scaleY(-1);
-      width: 100%;
-      margin-top: -1rem;
+  &__huddle {
+    path {
+      fill: #fff;
     }
   }
 }

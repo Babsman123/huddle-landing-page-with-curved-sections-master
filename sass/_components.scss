@@ -13,6 +13,7 @@
       border-radius: 2rem;
       text-align: center;
       color: $color-light-pink;
+      cursor: pointer;
     }
   }
 }
@@ -28,8 +29,36 @@
     border: none;
     color: #fff;
     box-shadow: 0 0.2rem 1rem $color-cyan;
+    cursor: pointer;
   }
 
   &__data {
+  }
+}
+
+.grow {
+  background-color: $color-blue;
+}
+.convo {
+  margin: 3rem 0;
+}
+.users {
+  background-color: $color-blue;
+}
+
+.build {
+  margin: 3rem 0;
+
+  &__button {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    width: 80%;
+    background-color: $color-pink;
+    border: none;
+    color: #fff;
+    box-shadow: 0 0.2rem 1rem $color-cyan;
+    cursor: pointer;
   }
 }
