@@ -37,6 +37,8 @@ body {
     [full-start]8rem [center-start]repeat(10, [col-start] 1fr [col-end])
     [center-end] 8rem[full-end];
   grid-template-rows: min-content;
+  position: relative;
+  font-family: "Open Sans", serif;
 
   @media only screen and (max-width: $bp-small) {
     grid-template-columns: repeat(12, 1fr);

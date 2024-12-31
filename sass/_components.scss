@@ -20,16 +20,44 @@
 
 .community {
   &__button {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 1.5rem 2rem;
-    border-radius: 2rem;
-    width: 80%;
-    background-color: $color-pink;
-    border: none;
-    color: #fff;
-    box-shadow: 0 0.2rem 1rem $color-cyan;
-    cursor: pointer;
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      border-radius: 2rem;
+      width: 80%;
+      background-color: $color-pink;
+      border: none;
+      color: #fff;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      font-family: "Open Sans", serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2rem;
+
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+
+      &:hover {
+        transform: translateY(-0.4rem);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.7);
+          opacity: 0;
+        }
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        transform: translateY(-0.2rem);
+      }
+    }
   }
 
   &__data {
@@ -50,15 +78,121 @@
   margin: 3rem 0;
 
   &__button {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 1.5rem 2rem;
-    border-radius: 2rem;
-    width: 80%;
-    background-color: $color-pink;
-    border: none;
-    color: #fff;
-    box-shadow: 0 0.2rem 1rem $color-cyan;
-    cursor: pointer;
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      border-radius: 2rem;
+      width: 80%;
+      background-color: $color-pink;
+      border: none;
+      color: #fff;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      font-family: "Open Sans", serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2rem;
+
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    &:hover {
+      transform: translateY(-0.4rem);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.7);
+        opacity: 0;
+      }
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-0.2rem);
+    }
+  }
+}
+
+.footer {
+  &__huddle {
+    .huddle-text {
+      margin-bottom: 1rem;
+      margin-right: 10rem;
+
+      @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__contact {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    .contact-type {
+      margin-left: 1rem;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        margin-left: 1.4rem;
+        letter-spacing: 1px;
+      }
+    }
+
+    img {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
+
+  &__newsletter {
+    h4 {
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      margin-top: 0.4rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      margin-right: 10rem;
+
+      @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+      }
+    }
+    .form-subscribe {
+      display: flex;
+      margin-top: 2rem;
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+      }
+
+      .subscribe-input {
+        border: none;
+        padding: 1.5rem 1rem;
+        border-radius: 0.5rem;
+      }
+      .btn-subscribe {
+        background-color: $color-light-pink;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.2rem 2.5rem;
+        margin-left: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+          margin-left: 0;
+          margin-top: 1.5rem;
+          align-self: flex-end;
+          padding: 1.5rem 3.5rem;
+        }
+      }
+    }
   }
 }

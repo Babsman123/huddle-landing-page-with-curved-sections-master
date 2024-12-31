@@ -3,14 +3,23 @@
     font-size: 3.5rem;
     text-align: center;
 
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 3rem;
+    }
+
     @media only screen and (max-width: $bp-small) {
-      margin: 0 5rem;
+      margin: 4rem 2rem 2rem 2rem;
+      font-size: 3.5rem;
     }
   }
   &__text {
     font-size: 1.3rem;
     text-align: center;
-    margin: 0 13rem;
+    margin: 0 12rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0 3rem;
+    }
 
     @media only screen and (max-width: $bp-small) {
       margin: 0 1rem;
@@ -18,11 +27,9 @@
   }
 
   .data {
-    border: 1px solid green;
-
     &__text {
-      font-size: 1.6rem;
-      border: 1px solid yellow;
+      font-size: 1.4rem;
+
       &:last-child {
         text-align: center;
       }
@@ -36,12 +43,22 @@
       font-size: 3rem;
       font-weight: bolder;
       margin-bottom: 1rem;
+
+      @media only screen and (max-width: $bp-small) {
+        text-align: center;
+        font-size: 2.5rem;
+      }
     }
     p {
       font-size: 1.2rem;
       margin-right: 2rem;
       font-weight: 600;
       color: $color-cyan;
+
+      @media only screen and (max-width: $bp-small) {
+        text-align: center;
+        margin-right: 0;
+      }
     }
   }
 }
@@ -53,6 +70,39 @@
 
     @media only screen and (max-width: $bp-small) {
       margin: 0 5rem;
+      font-size: 3rem;
+    }
+  }
+}
+
+.footer {
+  &__huddle {
+    color: #fff;
+
+    p {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+  }
+  &__newsletter {
+    color: #fff;
+    h4 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.7;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .btn-subscribe {
+      color: #fff;
+      font-weight: 700;
     }
   }
 }
