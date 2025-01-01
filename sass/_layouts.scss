@@ -4,7 +4,7 @@
 
   display: flex;
   justify-content: space-between;
-  padding: 2rem 2.5rem;
+  padding: 2.5rem 2.5rem;
   position: fixed;
   background-color: #fff;
   width: 100%;
@@ -24,7 +24,7 @@
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  margin: 10rem 0 5rem 0;
+  margin: 15rem 0 5rem 0;
 
   //   @media only screen and (max-width: $bp-small) {
   //     display: none;
@@ -40,12 +40,13 @@
   &__text {
     grid-column: 2 / 6;
     margin-bottom: 3rem;
+    max-width: 100rem;
   }
 
   &__button {
     grid-column: 3 / 5;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
 
     @media only screen and (max-width: $bp-small) {
       grid-column: 2 / 6;
@@ -55,6 +56,7 @@
   img {
     grid-column: 2 / 6;
     width: 100%;
+    animation: 2s moveInLeft;
 
     @media only screen and (max-width: $bp-small) {
       margin-top: 5rem;
@@ -63,7 +65,7 @@
 
   &__data {
     grid-column: 2 / 6;
-    margin-top: 5rem;
+    margin-top: 10rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-column-gap: 5rem;
@@ -78,8 +80,9 @@
       grid-template-columns: repeat(4, 1fr);
 
       &__user {
-        font-size: 7rem;
+        font-size: 5.5rem;
         font-weight: 900;
+        margin-bottom: 0.5rem;
         grid-column: 2 / 4;
       }
       img {
@@ -270,6 +273,20 @@
 @keyframes moveInRight {
   80% {
     transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100rem);
+  }
+  80% {
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;

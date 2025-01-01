@@ -27,7 +27,7 @@
       margin: 0 auto;
       padding: 1.5rem 2rem;
       border-radius: 2rem;
-      width: 80%;
+      width: 65%;
       background-color: $color-pink;
       border: none;
       color: #fff;
@@ -85,7 +85,7 @@
       margin: 0 auto;
       padding: 1.5rem 2rem;
       border-radius: 2rem;
-      width: 80%;
+      width: 65%;
       background-color: $color-pink;
       border: none;
       color: #fff;
@@ -125,6 +125,7 @@
     .huddle-text {
       margin-bottom: 1rem;
       margin-right: 10rem;
+      max-width: 100rem;
 
       @media only screen and (max-width: $bp-small) {
         margin-right: 0;
@@ -161,6 +162,7 @@
     p {
       margin-bottom: 1rem;
       margin-right: 10rem;
+      max-width: 100rem;
 
       @media only screen and (max-width: $bp-small) {
         margin-right: 0;
@@ -178,19 +180,41 @@
         border: none;
         padding: 1.5rem 1rem;
         border-radius: 0.5rem;
+        width: 70%;
+
+        &:focus,
+        &:active {
+          outline: none;
+        }
       }
       .btn-subscribe {
-        background-color: $color-light-pink;
+        background-color: $color-pink;
         border: none;
         border-radius: 0.5rem;
-        padding: 0.2rem 2.5rem;
+        padding: 0.2rem 4rem;
         margin-left: 2rem;
+        cursor: pointer;
 
         @media only screen and (max-width: $bp-small) {
           margin-left: 0;
           margin-top: 1.5rem;
           align-self: flex-end;
           padding: 1.5rem 3.5rem;
+        }
+
+        &:hover {
+          transform: translateY(-0.4rem);
+
+          &::after {
+            transform: scaleX(1.4) scaleY(1.7);
+            opacity: 0;
+          }
+        }
+
+        &:active,
+        &:focus {
+          outline: none;
+          transform: translateY(-0.2rem);
         }
       }
     }
