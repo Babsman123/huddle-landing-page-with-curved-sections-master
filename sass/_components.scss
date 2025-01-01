@@ -186,6 +186,10 @@
         &:active {
           outline: none;
         }
+
+        @media only screen and (max-width: $bp-small) {
+          width: 100%;
+        }
       }
       .btn-subscribe {
         background-color: $color-pink;

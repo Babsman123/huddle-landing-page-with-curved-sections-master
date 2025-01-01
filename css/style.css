@@ -152,6 +152,9 @@ body {
     width: 70%; }
     .footer__newsletter .form-subscribe .subscribe-input:focus, .footer__newsletter .form-subscribe .subscribe-input:active {
       outline: none; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__newsletter .form-subscribe .subscribe-input {
+        width: 100%; } }
   .footer__newsletter .form-subscribe .btn-subscribe {
     background-color: #ff52bf;
     border: none;
